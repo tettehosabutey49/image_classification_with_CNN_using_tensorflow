@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Documentpc\Image Classification CNN using pytorch\imageclassenv"
+VIRTUAL_ENV="C:\Documentpc\Image Classification CNN using tensorflow\imageclassenv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

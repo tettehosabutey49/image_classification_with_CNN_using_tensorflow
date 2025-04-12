@@ -1,0 +1,80 @@
+# 🧠 Image Classifier using TensorFlow
+
+This project is a simple deep learning-based image classification model built using **TensorFlow** and **Keras**. It classifies images into predefined categories using a Convolutional Neural Network (CNN).
+
+## 🚀 Features
+
+- Built with TensorFlow and Keras
+- Uses CNN architecture for high accuracy
+- Trained on a custom dataset
+- Capable of classifying images into different categories
+- Easy to train and test with new images
+
+## 🧾 Requirements
+
+- Python 3.x  
+- TensorFlow  
+- NumPy  
+- Matplotlib  
+- scikit-learn  
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+## 🛠 How to Run
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/Image_Classification_CNN_using_tensorflow.git
+```
+
+2. Navigate into the project folder:
+
+```bash
+cd Image_Classification_CNN_using_tensorflow
+```
+
+3. Train the model:
+
+```bash
+python train.py
+```
+
+4. Test the model with new images:
+download any one of the feature images ie horse, truck, airplane etc
+
+Make sure to crop it into a 32 x 32 format and save it as jpg
+
+follow this procedure to load your image and use the saved model to predict what image it is, 
+example: 
+
+## Loading the our images to make predictions
+img = cv.imread("truck.jpg")
+
+## Prediction
+##NB divide the image by 255 to scale it to 0-1 as we did on the training data
+prediction = model.predict(np.array([img])/255)
+
+## Use argmax to select the index of the neuron with the highest probability
+index = np.argmax([prediction])
+print(f"Prediction is : {class_names[index]}")
+
+## 📂 Project Structure
+
+```
+.
+├── train.py          # For training the model
+├── predict.py        # For making predictions
+├── dataset/          # Training and test images
+├── models/           # Saved trained models
+├── README.md         # Project documentation
+└── requirements.txt  # Python dependencies
+```
+
+
+
+
